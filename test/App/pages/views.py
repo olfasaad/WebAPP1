@@ -20,6 +20,8 @@ def form2(request):
      data.save()
      return render(request,'Form/form2.html',{'lf':Loginn,'username':username},)
 def form3(request):
+   #nwariha el form el mara hedhi khater deja el form ta3rf el model
+    LoginForm(request.POST).save()
 
     return render(request,'Form/form3.html',{'lf':LoginForm})
 
