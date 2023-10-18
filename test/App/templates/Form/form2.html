@@ -1,0 +1,13 @@
+{% extends 'base.html' %} 
+
+
+{% block index %}
+<form action=""method="POST">
+   {% csrf_token %}
+   {{ lf }}
+   <input type="submit" value="Submit">
+</form>
+<h1>Hello, {{ username }}</h1>
+
+
+{% endblock index %}

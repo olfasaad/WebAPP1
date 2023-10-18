@@ -1,0 +1,50 @@
+{% extends 'base.html' %} 
+
+{% block index %}
+{% if name == 'olfa saad foufa saad' %}
+<h1>welcome to this page index !!!!! </h1>
+{% endif %}
+<html>
+    
+<body>
+  
+
+    <h1>la page index template </h1>
+    <h3> Les filters </h3>
+    <h2>name = {{name |capfirst }} </h2> <br>
+    name = name |capfirst <br>
+        capfirst=premier alphabet en majus <br>
+        name = {{prenom |default:'not found ' }} <br>
+         name = prenom |default:'not found ' <br>
+        default :'' = si you get from the database an empty value write not found <br>
+       <h3>
+           name ={{name|slice:":5"}} <br>
+           name =name|slice:":5" <br>
+           this to cut from the begining of the phrase until 5
+       </h3>
+       <h3>
+        name ={{name|length}} <br>
+        name =name|length <br>
+        with length you can know how many letters in phrase 
+    </h3>
+    <h3>
+        name ={{name|add:'   student in master'}} <br>
+        name|add:'student in master' <br>
+        to add to this value another value with it 
+    </h3>
+    <h3>
+        name ={{name|cut:'o'}} <br>
+        name =name|cut:''<br>
+        to cut all the spaces or anything else from the phrase 
+    </h3>
+    <h3>
+        name ={{number|filesizeformat}} <br>
+        number|filesizeformat <br>
+        to format  the big number to Gigabit /MB
+    </h3>
+    </h2>
+    <h2>age = {{age}}</h2>
+    
+</body>
+</html>
+{% endblock index %}

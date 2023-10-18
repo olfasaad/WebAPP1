@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+
+{% block index %}
+<form action=""method="POST">
+   {% csrf_token %}
+   name <input type="text" name="user"placeholder="name "> <br>
+   Email <input type="text" name="email"placeholder="Email"> <br>
+   password <input name="password" type="password"> <br>
+   <input type="submit" value="button">
+</form>
+
+<h1>Hello, {{ username }}</h1>
+
+
+
+{% endblock index %}

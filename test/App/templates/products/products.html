@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+
+{% block index %}
+<h1>tous les produit </h1>
+<table border="1">
+{% for x in pro %}
+<tr>
+ <td><h3>{{x.id}}</h3></td>
+ <td> <h3>{{x.name}}</h3><td>
+    <td><h3>{{x.price}}</h3> </td>
+        <td><h3>{{x.content}}</h3></td>
+        <td><img src="{{x.image.url}}" alt=""></td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock index %}

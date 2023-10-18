@@ -1,0 +1,16 @@
+<style>
+  
+        ul{color: rgb(18, 17, 19);
+        font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;}
+        ul{
+        background-color: blue;}
+    </style>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
+{% include 'parts/navbar.html' %}
+{% block index %}
+
+{% endblock index %}
+
+{% include 'parts/footer.html' %}
